@@ -29,7 +29,7 @@ struct ContentView: View {
     }
     var body: some View {
         VStack {
-            Slider(value: $model.days, in: 50.0 ... 500.0) {
+            Slider(value: $model.days, in: 50.0 ... 730, step: 10.0) {
                 HStack {
                     Text("Days")
                     Spacer()
@@ -54,7 +54,7 @@ struct ContentView: View {
                 Plot(points: model.rt, xRange: xRange, yRange: yRange).stroke(Color.green, style: StrokeStyle(lineWidth: 1))
                 Plot(points: dataA, xRange: xRange, yRange: yRange).stroke(Color.primary, style: StrokeStyle(lineWidth: 1))
                 Plot(points: model.lt, xRange: xRange, yRange: 0.0 ... 1.0).stroke(Color.secondary, style: StrokeStyle(lineWidth: 1, dash: [1, 3]))
-            }
+                }.drawingGroup()
             .background(Color.primary.colorInvert()).clipped()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

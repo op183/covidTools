@@ -16,7 +16,8 @@ class SHIRJA: ObservableObject {
 
     @Published var eta = 0.6
     @Published var hiddenInfectious: Double = 1.0
-    @Published var days: Double = 365.0
+    @Published var days: Double = 300.0
+    
     @Published var refDay: Int = 26
     
     let N: Double   // population
@@ -80,7 +81,7 @@ class SHIRJA: ObservableObject {
     let betad = GDWD(shape: 1, scale: 1 / 2, alpha: 1, theta: 1)
     
     func solve() {
-
+        //let start = Date()
         // reset
         var S = [1.0]
         var H = [hiddenInfectious / N]
@@ -90,17 +91,26 @@ class SHIRJA: ObservableObject {
         var A = [0.0]
         var B: [Double] = []
         var L: [Double] = []
+        //S.reserveCapacity(1000)
+        //H.reserveCapacity(1000)
+        //I.reserveCapacity(1000)
+        //R.reserveCapacity(1000)
+        //J.reserveCapacity(1000)
+        //A.reserveCapacity(1000)
+        //B.reserveCapacity(1000)
+        //L.reserveCapacity(1000)
 
         (0 ..< Int(days) + refDay).forEach { (i) in
             let l = betaf(x: i, intervention: [
                 refDay + 6:0.48,        // zaciatok opatreni
-                refDay + 10:0.445,     // mimoriadny stav + maloobchod
-                refDay + 19:0.435,     // rúška
+                refDay + 10:0.445,      // mimoriadny stav + maloobchod
+                refDay + 19:0.435,      // rúška
                 refDay + 32:0.203,      // povinna karantena + curfew
                 refDay + 39:0.205,      // - curfew
                 refDay + 47:0.2,        // prva faza uvolnenia
-                refDay + 61:0.35,        // druha a tretia faza uvolnenia
-                refDay + 75:0.44,     // stvrta faza uvolnenia
+                refDay + 61:0.35,       // druha a tretia faza uvolnenia
+                refDay + 75:0.4,        // stvrta faza uvolnenia
+
             ], dist: betad)
             let b = S[i] * H[i] * l
             B.append(b)
@@ -176,5 +186,8 @@ class SHIRJA: ObservableObject {
         lt = L[refDay...].map{$0}.enumerated().map({ (v) -> CGPoint in
             .init(x: Double(v.offset), y: v.element / beta)
         })
+        
+        //let stop = Date()
+        //print(stop.distance(to: start))
     }
 }

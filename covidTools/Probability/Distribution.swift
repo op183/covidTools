@@ -26,21 +26,39 @@ extension DiscreteDistribution {
     }
     
     func tll(x: Int, lambda: (Int) -> Double = { _ in 1.0}) -> Double {
-        (0 ... x).map { (i) -> Double in
-            pmf(x: i) * lambda(x - i)
-        }.reduce(0.0, +)
+        var r = 0.0
+        //(0 ... x).map { (i) -> Double in
+        //    pmf(x: i) * lambda(x - i)
+        //}.reduce(into: 0.0) { (r, v) in
+        //    r += v
+        //}
+        //.reduce(0.0, +)
+        for i in 0 ... x {
+            r += pmf(x: i) * lambda(x - i)
+        }
+        return r
     }
     
     func tll(x: Int, pmf: (Int) -> Double, lambda: (Int) -> Double = { _ in 1.0}) -> Double {
-        (0 ... x).map { (t) -> Double in
-            pmf(t) * tll(x: x - t, lambda: lambda)
-        }.reduce(0.0, +)
+        //(0 ... x).map { (t) -> Double in
+        //    pmf(t) * tll(x: x - t, lambda: lambda)
+        //}.reduce(0.0, +)
+        var r = 0.0
+        for t in 0 ... x {
+            r += pmf(t) * tll(x: x - t, lambda: lambda)
+        }
+        return r
     }
     
     func tllmultiply(x: Int, pmf _pmf: (Int) -> Double, v: Double) -> Double {
-        (0 ... x).map { (t) -> Double in
-            pmf(x: t) * _pmf(x - t) * v
-        }.reduce(0.0, +)
+        //(0 ... x).map { (t) -> Double in
+        //    pmf(x: t) * _pmf(x - t) * v
+        //}.reduce(0.0, +)
+        var r = 0.0
+        for t in 0 ... x {
+            r += pmf(x: t) * _pmf(x - t) * v
+        }
+        return r
     }
     
     func moment(x: Int, n: Int, c: Double = 0.0) -> Double {
@@ -60,7 +78,7 @@ struct GDWD: DiscreteDistribution {
     
     var _pmf: [Double] = []
     
-    init(shape: Double, scale: Double, alpha: Double, theta: Double, precompute: Int = 500) {
+    init(shape: Double, scale: Double, alpha: Double, theta: Double, precompute: Int = 1000) {
         self.shape = shape
         self.scale = scale
         self.alpha = alpha
