@@ -81,8 +81,7 @@ class SHIRJA: ObservableObject {
     let betad = GDWD(shape: 1, scale: 1 / 2, alpha: 1, theta: 1)
     
     func solve() {
-        //let start = Date()
-        // reset
+       
         var S = [1.0]
         var H = [hiddenInfectious / N]
         var I = [eta * H[0]]
@@ -91,6 +90,7 @@ class SHIRJA: ObservableObject {
         var A = [0.0]
         var B: [Double] = []
         var L: [Double] = []
+        
         //S.reserveCapacity(1000)
         //H.reserveCapacity(1000)
         //I.reserveCapacity(1000)
@@ -187,7 +187,5 @@ class SHIRJA: ObservableObject {
             .init(x: Double(v.offset), y: v.element / beta)
         })
         
-        //let stop = Date()
-        //print(stop.distance(to: start))
     }
 }
