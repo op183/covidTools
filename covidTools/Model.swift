@@ -110,6 +110,7 @@ class SHIRJA: ObservableObject {
                 refDay + 47:0.215,        // prva faza uvolnenia
                 refDay + 61:0.25,       // druha a tretia faza uvolnenia
                 refDay + 75:0.44,        // stvrta faza uvolnenia
+                
 
             ], dist: betad)
             let b = S[i] * H[i] * l
