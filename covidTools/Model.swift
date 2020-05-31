@@ -105,11 +105,11 @@ class SHIRJA: ObservableObject {
                 refDay + 6:0.48,        // zaciatok opatreni
                 refDay + 10:0.445,      // mimoriadny stav + maloobchod
                 refDay + 19:0.435,      // rúška
-                refDay + 32:0.203,      // povinna karantena + curfew
-                refDay + 39:0.205,      // - curfew
-                refDay + 47:0.2,        // prva faza uvolnenia
-                refDay + 61:0.35,       // druha a tretia faza uvolnenia
-                refDay + 75:0.4,        // stvrta faza uvolnenia
+                refDay + 32:0.2,      // povinna karantena + curfew
+                refDay + 39:0.202,      // - curfew
+                refDay + 47:0.215,        // prva faza uvolnenia
+                refDay + 61:0.25,       // druha a tretia faza uvolnenia
+                refDay + 75:0.44,        // stvrta faza uvolnenia
 
             ], dist: betad)
             let b = S[i] * H[i] * l

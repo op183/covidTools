@@ -27,6 +27,9 @@ struct ContentView: View {
     var yRange: ClosedRange<CGFloat> {
         0.0 ... pow(5.0,m)
     }
+    let g = DragGesture(minimumDistance: 0, coordinateSpace: .global).onEnded({
+        print($0.startLocation.x)
+    })
     var body: some View {
         VStack {
             Slider(value: $model.days, in: 50.0 ... 730, step: 10.0) {
@@ -54,8 +57,10 @@ struct ContentView: View {
                 Plot(points: model.rt, xRange: xRange, yRange: yRange).stroke(Color.green, style: StrokeStyle(lineWidth: 1))
                 Plot(points: dataA, xRange: xRange, yRange: yRange).stroke(Color.primary, style: StrokeStyle(lineWidth: 1))
                 Plot(points: model.lt, xRange: xRange, yRange: 0.0 ... 1.0).stroke(Color.secondary, style: StrokeStyle(lineWidth: 1, dash: [1, 3]))
-                }.drawingGroup()
-            .background(Color.primary.colorInvert()).clipped()
+                }
+            .drawingGroup()
+            .background(Color.primary.colorInvert().gesture(g)).clipped()
+            //.gesture(g)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -154,6 +159,7 @@ let _sk_rd: [Double] = [
     1520,
     1520,
     1521,
+    1521,
 ]
 
 let sk_rd: [Double] = [
@@ -242,6 +248,7 @@ let sk_rd: [Double] = [
     160,
     154,
     137,
+    127,
 ]
 
 
