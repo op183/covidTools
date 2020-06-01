@@ -32,35 +32,22 @@ struct ContentView: View {
     })
     var body: some View {
         VStack {
-            
-            //Slider(value: $model.days, in: 50.0 ... 730, step: 10.0)
-            //Slider(value: $model.beta, in: 0.1 ... 0.6)
-                Slider(value: $model.days, in: 50.0 ... 730, step: 10.0) {
+            Slider(value: $model.days, in: 50.0 ... 730, step: 10.0) {
                 HStack {
-                    //Text("Days")
+                    Text("Days")
                     Spacer()
                     Text(String(format: "%d", Int(model.days)))//.frame(width: 200)
-                //Text("Beta \(String(format: "%.4f", model.beta))")
                 }.frame(width: 200)
             }.padding(.horizontal)
-        /*
-            Slider(value: $model.eta, in: 0.1 ... 1.0){
-                HStack {
-                    //Text("Days")
-                    Spacer()
-                    //Text(String(format: "%d", //Int(model.days)))//.frame(width: 200)
-                    Text("Eta \(String(format: "%.4f", model.eta))")
-                }.frame(width: 200)
-            }.padding(.horizontal)*/
             
             Slider(value: $m, in: 4.0 ... 10.0) {
                 HStack {
-                //Text("beta \(String(format: "%.4f", model.lambda))").frame(width: 200)
                     Text("Cases")
                     Spacer()
                     Text(String(format: "%8.f", pow(5.0,m)))
                 }.frame(width: 200)
             }.padding(.horizontal)
+            
             ZStack {
                 Plot(points: model.jt, xRange: xRange, yRange: yRange).stroke(Color.orange, style: StrokeStyle(lineWidth: 1))
                 Plot(points: model.ht, xRange: xRange, yRange: yRange).stroke(Color.red, style: StrokeStyle(lineWidth: 1, dash: [3, 3]))
