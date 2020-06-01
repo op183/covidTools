@@ -11,12 +11,12 @@ import Combine
 
 class SHIRJA: ObservableObject {
     // model parameters
-    @Published var beta = 0.24
-    @Published var lambda = 0.28
+    @Published var beta = 0.2401
+    //@Published var lambda = 0.28
 
-    @Published var eta = 0.6
+    @Published var eta = 0.5840 //0.6
     @Published var hiddenInfectious: Double = 1.0
-    @Published var days: Double = 300.0
+    @Published var days: Double = 120.0
     
     @Published var refDay: Int = 26
     
