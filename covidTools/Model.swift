@@ -12,6 +12,7 @@ import Combine
 class SHIRJA: ObservableObject {
     // model parameters
     @Published var beta = 0.2401
+    
     //@Published var lambda = 0.28
 
     @Published var eta = 0.5840 //0.6

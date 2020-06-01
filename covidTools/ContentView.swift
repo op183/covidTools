@@ -32,6 +32,7 @@ struct ContentView: View {
     })
     var body: some View {
         VStack {
+            
             //Slider(value: $model.days, in: 50.0 ... 730, step: 10.0)
             //Slider(value: $model.beta, in: 0.1 ... 0.6)
                 Slider(value: $model.days, in: 50.0 ... 730, step: 10.0) {
