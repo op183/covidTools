@@ -11,15 +11,15 @@ import Combine
 
 class SHIRJA: ObservableObject {
     // model parameters
-    @Published var beta = 0.2401
+    @Published var beta = 0.244//0.2401
     
     //@Published var lambda = 0.28
 
-    @Published var eta = 0.5840 //0.6
+    @Published var eta = 0.589//0.5840 //0.6
     @Published var hiddenInfectious: Double = 1.0
     @Published var days: Double = 120.0
     
-    @Published var refDay: Int = 26
+    @Published var refDay: Int = 25
     
     let N: Double   // population
     var handle: AnyCancellable? = nil
@@ -111,7 +111,7 @@ class SHIRJA: ObservableObject {
                 refDay + 47:0.215,        // prva faza uvolnenia
                 refDay + 61:0.25,       // druha a tretia faza uvolnenia
                 refDay + 75:0.44,        // stvrta faza uvolnenia
-                
+                refDay + 93:0.6,        // stvrta faza uvolnenia
 
             ], dist: betad)
             let b = S[i] * H[i] * l
