@@ -78,7 +78,7 @@ class SHIRJA: ObservableObject {
     let gdwd5 = GDWD(shape: 8, scale: 1 / 25, alpha: 2, theta: 1)
     //let gdwd5 = GDWD(shape: 3.8, scale: 0.057, alpha: 52, theta: 1)
 
-    // fixed mobility change dynamics (exponential, 3 days)
+    // fixed mobility change dynamics (exponential, 2 days)
     let betad = GDWD(shape: 1, scale: 1 / 2, alpha: 1, theta: 1)
     
     func solve() {
@@ -111,7 +111,7 @@ class SHIRJA: ObservableObject {
                 refDay + 47:0.215,        // prva faza uvolnenia
                 refDay + 61:0.22,       // druha a tretia faza uvolnenia
                 refDay + 75:0.38,        // stvrta faza uvolnenia
-                refDay + 93:0.44,        // piata faza uvolnenia ??
+                refDay + 90:0.44,        // piata faza uvolnenia ??
 
             ], dist: betad)
             let b = S[i] * H[i] * l
