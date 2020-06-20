@@ -179,6 +179,7 @@ let _sk_rd: [Double] = [
     1561,
     1562,
     1576,
+    1586,
 ]
 
 let sk_rd: [Double] = [
@@ -287,6 +288,7 @@ let sk_rd: [Double] = [
     96,
     91,
     101,
+    111,
 ]
 
 
