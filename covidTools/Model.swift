@@ -112,6 +112,9 @@ class SHIRJA: ObservableObject {
                 refDay + 61:0.23,       // druha a tretia faza uvolnenia
                 refDay + 75:0.33,        // stvrta faza uvolnenia
                 refDay + 90:0.9,        // piata faza uvolnenia ??
+                
+                refDay + 130:0.3,        // další lockdown ??? asi áno ...
+
 
             ], dist: betad)
             let b = S[i] * H[i] * l
