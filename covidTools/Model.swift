@@ -111,7 +111,7 @@ class SHIRJA: ObservableObject {
                 refDay + 47:0.215,        // prva faza uvolnenia
                 refDay + 61:0.23,       // druha a tretia faza uvolnenia
                 refDay + 75:0.33,        // stvrta faza uvolnenia
-                refDay + 90:0.8,        // piata faza uvolnenia ??
+                refDay + 90:0.75,        // piata faza uvolnenia ??
                 
                 refDay + 130:0.3,        // další lockdown ??? asi áno ...
 
