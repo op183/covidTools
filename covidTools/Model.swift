@@ -117,6 +117,8 @@ class SHIRJA: ObservableObject {
                 refDay + 110:0.5,
                 refDay + 120:0.3,
                 refDay + 130:0.5,
+                
+                //refDay + 160:0.3,
 
 
 
