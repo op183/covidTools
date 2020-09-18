@@ -129,9 +129,12 @@ class SHIRJA: ObservableObject {
             let h1 =  (1 - eta) * gdwd1.tll(x: i, lambda: { (i) -> Double in
                 B[i]
             })
-            let h2 = eta * gdwd3.tll(x: i) { (i) -> Double in
+            let h2 = eta * gdwd3.tll(x: i, lambda: { (i) -> Double in
                 B[i]
-            }
+            })
+            //let h2 = eta * gdwd3.tll(x: i) { (i) -> Double in
+            //    B[i]
+            //}
             let h3 = (1 - eta) * gdwd1.pmf(x: i) * H[0]
             let h4 = eta * gdwd3.pmf(x: i) * H[0]
             
@@ -154,9 +157,12 @@ class SHIRJA: ObservableObject {
             })
             let j2 = (1 - eta) * gdwd4.tllmultiply(x: i, pmf: gdwd1.pmf(x:), v: H[0])
             
-            let a1 = gdwd5.tll(x: i) { (i) -> Double in
+            let a1 = gdwd5.tll(x: i, lambda: { (i) -> Double in
                 J[i]
-            }
+            })
+            //let a1 = gdwd5.tll(x: i) { (i) -> Double in
+            //    J[i]
+            //}
             
             S.append(S[i] - b)
             H.append(H[i] + b - h1 - h2 - h3 - h4)

@@ -62,9 +62,9 @@ extension DiscreteDistribution {
     }
     
     func moment(x: Int, n: Int, c: Double = 0.0) -> Double {
-        tll(x: x) { (i) -> Double in
+        tll(x: x, lambda: { (i) -> Double in
             pow(Double(x - i) - c, Double(n))
-        }
+        })
     }
 }
 
