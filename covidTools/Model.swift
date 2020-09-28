@@ -120,7 +120,7 @@ class SHIRJA: ObservableObject {
                 
                 refDay + 185:0.7,
 
-                refDay + 205:0.35, // (new messures) standby for vaccination ???? 
+                refDay + 210:0.35, // (new messures) standby for vaccination ???? 
 
 
             ], dist: betad)
