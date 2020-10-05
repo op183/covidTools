@@ -17,7 +17,7 @@ class SHIRJA: ObservableObject {
 
     @Published var eta = 0.589//0.5840 //0.6
     @Published var hiddenInfectious: Double = 1.0
-    @Published var days: Double = 150.0
+    @Published var days: Double = 360.0
     
     @Published var refDay: Int = 25
     
