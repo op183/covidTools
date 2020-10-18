@@ -102,6 +102,7 @@ class SHIRJA: ObservableObject {
         //L.reserveCapacity(1000)
 
         (0 ..< Int(days) + refDay).forEach { (i) in
+            
             let l = betaf(x: i, intervention: [
                 refDay + 6:0.48,        // zaciatok opatreni
                 refDay + 10:0.445,      // mimoriadny stav + maloobchod
