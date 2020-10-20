@@ -121,7 +121,7 @@ class SHIRJA: ObservableObject {
                 
                 refDay + 185:0.63, // dosiahli sme limit vyhladavania .... ???!!
 
-                refDay + 210:0.5, // (new messures) standby for vaccination ????
+                refDay + 210:0.45, // (new messures) standby for vaccination ????
                 refDay + 220:0.35, // (new messures) standby for vaccination ????
 
 
