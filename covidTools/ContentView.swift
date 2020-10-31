@@ -20,7 +20,7 @@ struct ContentView: View {
             .init(x: Double(v.offset), y: v.element)
         }
     }
-    @State var m: CGFloat = 6.8
+    @State var m: CGFloat = 7.0
     var xRange: ClosedRange<CGFloat> {
         0.0 ... CGFloat(model.days)
     }
@@ -312,6 +312,7 @@ let _sk_rd: [Double] = [
     48943,
     51728,
     55091,
+    57664,
 ]
 
 let sk_rd: [Double] = [
@@ -553,6 +554,7 @@ let sk_rd: [Double] = [
     36960,
     39301,
     42371,
+    44828,
 ]
 
 
