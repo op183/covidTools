@@ -125,7 +125,7 @@ class SHIRJA: ObservableObject {
                 refDay + 220:0.43, // hromadné podujatia, reštaurácie, fitness
                 
                 refDay + 230:0.39, // lockdown + plošné testovanie (Orava, Bardejov ...) ???????
-                refDay + 237:0.33, // lockdown + plošné testovanie (plošné) ???????
+                refDay + 237:0.36, // lockdown + plošné testovanie (plošné) ???????
                 //refDay + 244:0.35, // lockdown + plošné testovanie (plošné) ???????
 
             ], dist: betad)
