@@ -125,8 +125,8 @@ class SHIRJA: ObservableObject {
                 refDay + 220:0.44, // hromadné podujatia, reštaurácie, fitness
                 
                 refDay + 230:0.41, //0.39, // lockdown + plošné testovanie (Orava, Bardejov ...) ???????
-                refDay + 237:0.37, //0.36, // lockdown + plošné testovanie (plošné) ???????
-                refDay + 244:0.35, //0.35, // lockdown + plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
+                refDay + 237:0.36, //0.36, // lockdown + plošné testovanie (plošné) ???????
+                refDay + 244:0.32, //0.35, // lockdown + plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
 
             ], dist: betad)
             let b = S[i] * H[i] * l
