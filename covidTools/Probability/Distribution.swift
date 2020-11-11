@@ -18,7 +18,7 @@ extension DiscreteDistribution {
         1 - survival(x: x)
     }
     
-    func pmf(x: Int) -> Double {
+    func pmf(x: Int) -> Double { // probability mass (discrete density)
         if x < _pmf.count {
             return _pmf[x]
         }
