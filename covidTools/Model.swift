@@ -126,14 +126,16 @@ class SHIRJA: ObservableObject {
                 
                 refDay + 231:0.39, //0.39, // lockdown + plošné testovanie (Orava, Bardejov ...) ???????
                 
-                refDay + 238:0.08, //0.36, // lockdown + plošné testovanie (plošné) ???????
+                refDay + 238:0.08, // lockdown + plošné testovanie (plošné) ???????
                 refDay + 240:0.36, //0.36, // lockdown + plošné testovanie (plošné) ???????
 
-                refDay + 245:0.2, //0.35, // lockdown + plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
-                refDay + 247:0.39, //0.35, // lockdown + plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
+                refDay + 245:0.2, // plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
+                refDay + 247:0.39, // plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
 
+                refDay + 255:0.43, // partial easing
                 
-                //refDay + 255:0.5, //0.35, // lockdown + plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
+                refDay + 260:0.33,   // mass testing 4 in row (500 MOM >1%)
+                refDay + 262:0.39,
 
 
             ], dist: betad)
