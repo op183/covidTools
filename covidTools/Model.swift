@@ -104,6 +104,7 @@ class SHIRJA: ObservableObject {
         (0 ..< Int(days) + refDay).forEach { (i) in
             
             let l = betaf(x: i, intervention: [
+                // deň:vplyv_opatrení (miera sociálnych interakcií v popilácii) [0 ... 1]
                 refDay + 6:0.48,        // zaciatok opatreni
                 refDay + 10:0.445,      // mimoriadny stav + maloobchod
                 refDay + 19:0.435,      // rúška
