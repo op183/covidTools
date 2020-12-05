@@ -136,7 +136,7 @@ class SHIRJA: ObservableObject {
                 refDay + 255:0.43, // partial easing
                 
                 refDay + 260:0.41,   // mass testing 4 in row (500 MOM >1%)
-                refDay + 262:0.45,  // balanced Rt ≈ 1
+                refDay + 262:0.45,  // balanced Rt ≈ 1 (semms to be too much optimistic ?)
 
 
             ], dist: betad)
