@@ -104,7 +104,7 @@ class SHIRJA: ObservableObject {
         (0 ..< Int(days) + refDay).forEach { (i) in
             
             let l = betaf(x: i, intervention: [
-                // deň:vplyv_opatrení (miera sociálnych interakcií v popilácii) [0 ... 1]
+                // deň:vplyv_opatrení_a_reakcia_populácie (miera sociálnych interakcií v popilácii) [0 ... 1]
                 refDay + 6:0.48,        // zaciatok opatreni
                 refDay + 10:0.445,      // mimoriadny stav + maloobchod
                 refDay + 19:0.435,      // rúška
@@ -135,10 +135,10 @@ class SHIRJA: ObservableObject {
 
                 refDay + 255:0.46, // partial easing, balanced Rt ≈ 1,1
                 
-                refDay + 260:0.41,   // mass testing 4 in row (500 MOM >1%)
-                refDay + 262:0.48,  // balanced Rt ≈ 1,15 (semms to be too optimistic ?)
+                refDay + 260:0.41,  // "mass" testing 4th in row (500 MOM >1%), almost for nothing!!!
+                refDay + 262:0.56,  // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
                 
-                refDay + 280:0.41, // partial lockdown , balanced Rt ≈ 1
+                refDay + 280:0.38, // partial lockdown , balanced Rt ≈ 0,9
 
 
             ], dist: betad)
