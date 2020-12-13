@@ -138,7 +138,7 @@ class SHIRJA: ObservableObject {
                 refDay + 260:0.41,  // "mass" testing 4th in row (500 MOM >1%), almost for nothing!!!
                 refDay + 262:0.56,  // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
                 
-                refDay + 280:0.38, // partial lockdown , balanced Rt ≈ 0,9
+                refDay + 290:0.33, // partial lockdown , balanced Rt ≈ 0,8
 
 
             ], dist: betad)

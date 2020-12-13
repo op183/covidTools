@@ -28,7 +28,7 @@ struct ContentView: View {
         0.0 ... pow(5.0,m)
     }
     let g = DragGesture(minimumDistance: 0, coordinateSpace: .global).onEnded({
-        print($0.startLocation.x, $0.startLocation.y)
+        print($0.startLocation)
     })
     var body: some View {
         VStack {
