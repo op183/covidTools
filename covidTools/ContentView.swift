@@ -28,7 +28,7 @@ struct ContentView: View {
         0.0 ... pow(5.0,m)
     }
     let g = DragGesture(minimumDistance: 0, coordinateSpace: .global).onEnded({
-        print($0.startLocation.x)
+        print($0.startLocation.x, $0.startLocation.y)
     })
     var body: some View {
         VStack {
@@ -355,6 +355,7 @@ let _sk_rd: [Double] = [
     124921,
     127087,
     130794,
+    132984,
 ]
 
 let sk_rd: [Double] = [
@@ -639,6 +640,7 @@ let sk_rd: [Double] = [
     32362,
     32432,
     34230,
+    34741,
 ]
 
 
