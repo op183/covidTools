@@ -139,7 +139,9 @@ class SHIRJA: ObservableObject {
                 refDay + 262:0.53,  // revised Rt ≈ 1,29 ??? // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
                 
                 refDay + 290:0.215, // lockdown + curfew
-                //refDay + 320:0.55, // lockdown + curfew
+                refDay + 301:0.15, // lockdown + curfew
+                
+                refDay + 322:0.53, // partial easing, balanced Rt ≈ 1,3
 
 
             ], dist: betad)
