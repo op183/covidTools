@@ -134,12 +134,16 @@ class SHIRJA: ObservableObject {
                 refDay + 247:0.36, // plošné testovanie (limitované len pre sever, čo je totálny fail!!) ???????
 
                 refDay + 255:0.46, // partial easing, balanced Rt ≈ 1,1
+                refDay + 258:0.49,
                 
-                refDay + 260:0.41,  // "mass" testing 4th in row (500 MOM >1%), almost for nothing!!!
-                refDay + 262:0.51,  // revised Rt ≈ 1,2 ??? // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
+                refDay + 260:0.35,  // "mass" testing 4th in row (500 MOM >1%), almost for nothing!!!
+                refDay + 262:0.55,  // revised Rt ≈ 1,2 ??? // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
                 
-                refDay + 290:0.25, // lockdown + curfew
-                refDay + 301:0.23, // lockdown + curfew
+                refDay + 265:0.51,
+                refDay + 270:0.47,
+                
+                refDay + 292:0.30, // lockdown + curfew
+                refDay + 301:0.27, // lockdown + curfew
                 
                 refDay + 322:0.50, // partial easing, balanced Rt ≈ 1,2
 
