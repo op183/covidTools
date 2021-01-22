@@ -137,16 +137,18 @@ class SHIRJA: ObservableObject {
                 refDay + 258:0.49,
                 
                 refDay + 260:0.35,  // "mass" testing 4th in row (500 MOM >1%), almost for nothing!!!
-                refDay + 262:0.55,  // revised Rt ≈ 1,2 ??? // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
+                refDay + 262:0.58,  // revised Rt ≈ 1,2 ??? // balanced Rt ≈ 1,34 (semms to be too optimistic ?, will see in few days)
                 
                 refDay + 265:0.51,
                 refDay + 270:0.47,
                 
                 refDay + 286:0.35, // lockdown + curfew
-                refDay + 301:0.27, // lockdown + curfew
+                refDay + 301:0.30, // lockdown + curfew
                 
-                refDay + 322:0.50, // partial easing, balanced Rt ≈ 1,2
-
+                refDay + 322:0.08, // partial easing, balanced Rt ≈ 1,2
+                refDay + 324:0.28,
+                //refDay + 329:0.15, // partial easing, balanced Rt ≈ 1,2
+                refDay + 331:0.45,
 
             ], dist: betad)
             let b = S[i] * H[i] * l
