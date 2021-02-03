@@ -146,8 +146,8 @@ class SHIRJA: ObservableObject {
                 refDay + 301:0.35, // lockdown + curfew
                 
                 //refDay + 318:0.15,
-                refDay + 322:0.08,
-                refDay + 326:0.04,
+                refDay + 322:0.1,
+                refDay + 326:0.07,
                 refDay + 331:0.45, // ???
 
             ], dist: betad)
