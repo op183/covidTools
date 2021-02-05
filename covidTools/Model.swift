@@ -143,11 +143,11 @@ class SHIRJA: ObservableObject {
                 refDay + 270:0.47,
                 
                 refDay + 286:0.39, // lockdown + curfew
-                refDay + 301:0.35, // lockdown + curfew
+                refDay + 301:0.37, // lockdown + curfew
                 
                 //refDay + 318:0.15,
-                refDay + 322:0.1,
-                refDay + 326:0.07,
+                refDay + 322:0.3,
+                //refDay + 326:0.15,
                 refDay + 331:0.45, // ???
 
             ], dist: betad)
@@ -194,11 +194,11 @@ class SHIRJA: ObservableObject {
             //}
             
             S.append(S[i] - b)
-            H.append(H[i] + b - h1 - h2 - h3 - h4)
-            I.append(I[i] + i1 - i2 + i3 - i4 - i5)
-            R.append(R[i] + r1 + r2 + r3 + r4 + r5)
-            J.append(J[i] + j1 + j2)
-            A.append(J[i] - a1)
+            H.append(H[i] + b - h1 - h2 - h3 - h4)      // hidden
+            I.append(I[i] + i1 - i2 + i3 - i4 - i5)     // symptomatic
+            R.append(R[i] + r1 + r2 + r3 + r4 + r5)     // recovered
+            J.append(J[i] + j1 + j2)                    // cumulative infected
+            A.append(J[i] - a1)                         // active
             
             let corr = S[i] + H[i] + I[i] + R[i]
 
