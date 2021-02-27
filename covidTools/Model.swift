@@ -146,7 +146,7 @@ class SHIRJA: ObservableObject {
                 refDay + 301:0.37, // lockdown + curfew
                 
                 refDay + 322:0.44,
-                //refDay + 331:0.41, // ???
+                refDay + 341:0.46,
 
             ], dist: betad)
             let b = S[i] * H[i] * l
