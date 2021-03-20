@@ -148,7 +148,7 @@ class SHIRJA: ObservableObject {
                 refDay + 322:0.44,
                 refDay + 341:0.46,
                 
-                refDay + 367:0.4,
+                refDay + 360:0.4,
 
             ], dist: betad)
             let b = S[i] * H[i] * l
